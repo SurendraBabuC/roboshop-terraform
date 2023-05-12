@@ -19,7 +19,7 @@ resource "aws_instance" "instance" {
 
     inline = [
       "rm -rf roboshop-shell",
-      "git clone https://github.com/raghudevopsb72/roboshop-shell",
+      "git clone https://github.com/SurendraBabuC/roboshop-shell",
       "cd roboshop-shell",
       "sudo bash ${each.value["name"]}.sh"
     ]
