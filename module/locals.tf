@@ -16,5 +16,7 @@ locals {
   app_tags = {
     Name = "${var.component_name}.sh ${var.password}"
     Monitor = "true"
+    component = var.component_name
+    env = var.env
   }
 }
