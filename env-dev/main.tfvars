@@ -2,6 +2,7 @@ env = "dev"
 bastion_cidr = ["172.31.9.211/32"]
 default_vpc_id = "vpc-015bea95d06af787b"
 default_vpc_cidr = "172.31.0.0/16"
+default_vpc_rtid = "rtb-0ce3a84580f9fe371"
 vpc = {
   main = {
     cidr_block = "10.0.0.0/16"
