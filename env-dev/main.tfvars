@@ -3,6 +3,7 @@ bastion_cidr = ["172.31.9.211/32"]
 default_vpc_id = "vpc-015bea95d06af787b"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rtid = "rtb-0ce3a84580f9fe371"
+kms_arn = "arn:aws:kms:us-east-1:107719521846:key/4de4f1a6-10ef-4edb-9e58-e1199f52dd52"
 vpc = {
   main = {
     cidr_block = "10.0.0.0/16"
@@ -33,41 +34,51 @@ vpc = {
 
 app = {
   frontend = {
-    name = "frontend"
-    instance_type = "t3.micro"
-    subnet_name = "web"
-    allow_app_cidr = "public"
-    desired_capacity   = 2
-    max_size           = 10
-    min_size           = 2
+    name             = "frontend"
+    instance_type    = "t3.micro"
+    subnet_name      = "web"
+    allow_app_cidr   = "public"
+    desired_capacity = 2
+    max_size         = 10
+    min_size         = 2
   }
   catalogue = {
-    name = "catalogue"
-    instance_type = "t3.micro"
-    subnet_name = "app"
-    allow_app_cidr = "web"
-    desired_capacity   = 2
-    max_size           = 10
-    min_size           = 2
+    name             = "catalogue"
+    instance_type    = "t3.micro"
+    subnet_name      = "app"
+    allow_app_cidr   = "web"
+    desired_capacity = 2
+    max_size         = 10
+    min_size         = 2
   }
-#  cart = {
-#    name = "cart"
-#    instance_type = "t3.micro"
-#    subnet_name = "app"
-#  }
-#  user = {
-#    name = "user"
-#    instance_type = "t3.micro"
-#    subnet_name = "app"
-#  }
-#  shipping = {
-#    name = "shipping"
-#    instance_type = "t3.micro"
-#    subnet_name = "app"
-#  }
-#  payment = {
-#    name = "payment"
-#    instance_type = "t3.micro"
-#    subnet_name = "app"
-#  }
+  #  cart = {
+  #    name = "cart"
+  #    instance_type = "t3.micro"
+  #    subnet_name = "app"
+  #  }
+  #  user = {
+  #    name = "user"
+  #    instance_type = "t3.micro"
+  #    subnet_name = "app"
+  #  }
+  #  shipping = {
+  #    name = "shipping"
+  #    instance_type = "t3.micro"
+  #    subnet_name = "app"
+  #  }
+  #  payment = {
+  #    name = "payment"
+  #    instance_type = "t3.micro"
+  #    subnet_name = "app"
+  #  }
+}
+
+docdb = {
+  main = {
+    subnet_name = "db"
+    allow_db_cidr = "app"
+    engine_version = "4.0.0"
+    instance_count = 1
+    instance_class = "db.t3.medium"
+  }
 }
