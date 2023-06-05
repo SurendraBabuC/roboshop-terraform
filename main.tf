@@ -43,9 +43,8 @@ module "docdb" {
   instance_count = each.value["instance_count"]
   instance_class = each.value["instance_class"]
 
-  tags = local.tags
-  env  = var.env
-
+  tags    = local.tags
+  env     = var.env
   vpc_id  = local.vpc_id
   kms_arn = var.kms_arn
 }
