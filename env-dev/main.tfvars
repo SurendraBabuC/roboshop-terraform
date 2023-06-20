@@ -41,6 +41,7 @@ app = {
     desired_capacity = 1
     max_size         = 10
     min_size         = 1
+    app_port         = 80
   }
   catalogue = {
     name             = "catalogue"
@@ -50,6 +51,7 @@ app = {
     desired_capacity = 1
     max_size         = 10
     min_size         = 1
+    app_port         = 8080
   }
   #  cart = {
   #    name = "cart"
@@ -114,15 +116,15 @@ rabbitmq = {
 
 alb = {
   public = {
-    name = "public"
-    subnet_name = "public"
+    name           = "public"
+    subnet_name    = "public"
     allow-alb-cidr = null
-    internal = false
+    internal       = false
   }
   private = {
-    name = "private"
-    subnet_name = "app"
+    name           = "private"
+    subnet_name    = "app"
     allow-alb-cidr = "web"
-    internal = true
+    internal       = true
   }
 }
