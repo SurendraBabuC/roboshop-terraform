@@ -47,7 +47,7 @@ app = {
     instance_type    = "t3.micro"
     subnet_name      = "app"
     allow_app_cidr   = "web"
-    desired_capacity = 2
+    desired_capacity = 1
     max_size         = 10
     min_size         = 2
   }
