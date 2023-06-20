@@ -38,9 +38,9 @@ app = {
     instance_type    = "t3.micro"
     subnet_name      = "web"
     allow_app_cidr   = "public"
-    desired_capacity = 2
+    desired_capacity = 1
     max_size         = 10
-    min_size         = 2
+    min_size         = 1
   }
   catalogue = {
     name             = "catalogue"
@@ -49,7 +49,7 @@ app = {
     allow_app_cidr   = "web"
     desired_capacity = 1
     max_size         = 10
-    min_size         = 2
+    min_size         = 1
   }
   #  cart = {
   #    name = "cart"
