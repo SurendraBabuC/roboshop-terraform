@@ -92,7 +92,7 @@ module "alb" {
   vpc_id = local.vpc_id
 }
 
-module "app" {
+/*module "app" {
   depends_on = [module.vpc, module.docdb, module.rds, module.elasticache, module.rabbitmq, module.alb]
   source     = "git::https://github.com/SurendraBabuC/tf-module-app.git"
 
@@ -112,4 +112,4 @@ module "app" {
   env          = var.env
   bastion_cidr = var.bastion_cidr
   tags         = local.tags
-}
+}*/
