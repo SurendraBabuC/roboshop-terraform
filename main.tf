@@ -61,7 +61,7 @@ module "elasticache" {
   kms_arn = var.kms_arn
 }
 
-/*module "rabbitmq" {
+module "rabbitmq" {
   source = "git::https://github.com/SurendraBabuC/tf-module-amazon-mq.git"
 
   for_each      = var.rabbitmq
@@ -75,7 +75,7 @@ module "elasticache" {
   kms_arn      = var.kms_arn
   bastion_cidr = var.bastion_cidr
   domain_id    = var.domain_id
-}*/
+}
 
 /*
 module "alb" {
