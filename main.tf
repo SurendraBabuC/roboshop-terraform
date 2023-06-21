@@ -77,7 +77,7 @@ module "rabbitmq" {
   domain_id    = var.domain_id
 }
 
-module "alb" {
+/*module "alb" {
   source = "git::https://github.com/SurendraBabuC/tf-module-alb.git"
 
   for_each       = var.alb
@@ -90,7 +90,7 @@ module "alb" {
   tags   = local.tags
   env    = var.env
   vpc_id = local.vpc_id
-}
+}*/
 
 /*module "app" {
   depends_on = [module.vpc, module.docdb, module.rds, module.elasticache, module.rabbitmq, module.alb]
