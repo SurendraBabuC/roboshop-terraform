@@ -91,7 +91,7 @@ module "alb" {
   vpc_id = local.vpc_id
 }
 
-module "app" {
+/*module "app" {
   depends_on = [module.vpc, module.docdb, module.rds, module.elasticache, module.rabbitmq, module.alb]
   source     = "git::https://github.com/SurendraBabuC/tf-module-app.git"
 
@@ -118,4 +118,4 @@ env          = var.env
   domain_name  = var.domain_name
   domain_id    = var.domain_id
   kms_arn      = var.kms_arn
-}
+}*/
